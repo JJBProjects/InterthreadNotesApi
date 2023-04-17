@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "36894d7e-3d16-4d64-b872-63a44ee59134",
+		"name": "InterthreadNotesApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26610798"
+	},
+	"item": [
+		{
+			"name": "GetUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/getuser/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"getuser",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllNotes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/getallnotes",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"getallnotes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetNotesForUser",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetNoteForUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/getnoteforuser/1/note/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"getnoteforuser",
+						"1",
+						"note",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateNoteForUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NoteText\": \"Scallywag holystone landlubber or just lubber yardarm tackle Shiver me timbers cog heave down provost Admiral of the Black. Hornswaggle spanker man-of-war yo-ho-ho mutiny splice the main brace jack keelhaul fire ship Corsair. Bounty prow walk the plank lugsail port loot pirate bilge jib scuppers.  Sutler lee matey sloop plunder splice the main brace interloper.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/createnoteforuser/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"createnoteforuser",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserName\": \"NewlyCreatedUser1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/createuser",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"createuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n      \"op\": \"replace\",\r\n      \"path\": \"/username\",\r\n      \"value\": \"Updated - NewUserName\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/updateuser/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"updateuser",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "portNumber",
+			"value": "7289"
+		}
+	]
+}
